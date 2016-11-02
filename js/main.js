@@ -26,15 +26,30 @@ function validateForm(){
       return false; 
     }
     else if( correo == null || correo.length == 0 || /^\s+$/.test(correo) ) {
-      alert("Campo obligatorio correo");
+      //alert("Campo obligatorio correo");
+      var contenedor = document.getElementsByClassName('input-email-container')[0];
+      var alerta = document.createElement('span');
+      var nodoAlerta = document.createTextNode("Campo obligatorio correo");
+      alerta.appendChild(nodoAlerta);
+      contenedor.appendChild(alerta);
       return false; 
     }
     else if( contrasena == null || contrasena.length == 0 || /^\s+$/.test(contrasena) ) {
-      alert("Campo obligatorio contraseña");
+      //alert("Campo obligatorio contraseña");
+      var contenedor = document.getElementsByClassName('input-password-container')[0];
+      var alerta = document.createElement('span');
+      var nodoAlerta = document.createTextNode("Campo obligatorio contraseña");
+      alerta.appendChild(nodoAlerta);
+      contenedor.appendChild(alerta);
       return false; 
     }
     else if( listaBici == null || listaBici == 0) {
-      alert("Campo obligatorio lista");
+      //alert("Campo obligatorio lista");
+      var contenedor = document.getElementsByClassName('select-container')[0];
+      var alerta = document.createElement('span');
+      var nodoAlerta = document.createTextNode("Campo obligatorio lista");
+      alerta.appendChild(nodoAlerta);
+      contenedor.appendChild(alerta);
       return false; 
     }
     else{
